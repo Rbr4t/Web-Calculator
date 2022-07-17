@@ -1,3 +1,77 @@
-h1 {
-    color: blue
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    
+    
+}
+button {
+    width: 50px;
+    height: 50px;
+    
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 15px;
+    justify-content: center;
+    gap: 15px;
+
+}
+.numbers-section {
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.operators button{
+  background-color: orange;
+}
+.screen {
+    height: 100px;
+    background-color: thistle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[id="="] {
+  background-color: green;
+}
+
+.nums {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    width: 250px;
+    height: 70px;
+    border: 3px solid white;
+    
+}
+
+.real-buttons{
+    display: inline-flex;
+}
+
+.clear {
+    display: flex;
+    flex: 1 1 auto;
+    width: auto;
+    background-color: whitesmoke;
+    
 }
