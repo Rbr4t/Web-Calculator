@@ -88,3 +88,7 @@ button {
     background-color: whitesmoke;
     
 }
+
+.clear button{
+    flex: 1 1 auto
+}
