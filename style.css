@@ -85,10 +85,17 @@ button {
     display: flex;
     flex: 1 1 auto;
     width: auto;
-    background-color: whitesmoke;
     
+    gap: 5px
 }
 
 .clear button{
-    flex: 1 1 auto
+    flex: 1 1 auto;
+    
+}
+
+#delete {
+    display: inline-block;
+    font-size: 18px;
+    flex: 0.4 1 auto
 }

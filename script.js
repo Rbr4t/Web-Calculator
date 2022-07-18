@@ -1,3 +1,5 @@
+
+
 // Global variables
 const screen = document.querySelector('.nums');
 let operation = "";
@@ -24,7 +26,8 @@ function divide(a, b){
 
 // Function which operates and returns answer
 function operate(a, operation, b){
-    switch (operation!==""){
+    
+    switch (operation!=""){
         case operation == "+":
             return add(a, b);
             
@@ -46,12 +49,10 @@ function operate(a, operation, b){
 
 // Display the input to the screen
 function displayToScreen(e){
-    // stupid spaghetti code for not letting more than 1 comma into the number
     if (!isFloat || (isFloat && e.target.id !==".")){
         const textNode = document.createTextNode(e.target.id);
         screen.appendChild(textNode);
     };
-    
 };
 
 
@@ -67,26 +68,40 @@ input.addEventListener('click', function(e){
     if (e.target.id !== "="){
         displayToScreen(e);
     } else if (e.target.id === "="){
+        
         let screenContent = screen.textContent.split(operation);
+        console.log(screen.textContent)
         const answer = operate(screenContent[0], operation, screenContent[1])
         screen.textContent = answer;
         operation = "";
+        
     }; 
 });
 
 
 
 // Clear screen functionality
-const clear = document.querySelector('.clear');
+const clear = document.querySelector('#clear');
 clear.addEventListener('click', () => {
     screen.textContent = ""
     isFloat = false;
 });
 
 
+// Delete button functionality
+const deleteContent = document.querySelector('#delete');
+deleteContent.addEventListener('click', ()=>{
+    let deletebit = screen.textContent.slice(0, screen.textContent.length -1);
+    screen.textContent = deletebit;
+});
+
+
+
+
 
 // Change the operator + display it on screen
 function changeOperator(e){
+    console.log(operation)
     operation = e.target.id;
     const textNode = document.createTextNode(e.target.id);
     screen.appendChild(textNode);
@@ -101,7 +116,7 @@ operations.addEventListener('click', function(e){
     if (operation===""){
         changeOperator(e);
         isFloat = false;
-    } else if (operation!=="" && isFloat || !isFloat){
+    } else if (operation!==""){
         let screenContent = screen.textContent.split(operation);
         const answer = operate(screenContent[0], operation, screenContent[1])
         screen.textContent = answer;
@@ -109,3 +124,6 @@ operations.addEventListener('click', function(e){
         isFloat = false;
     }
 });
+
+
+
