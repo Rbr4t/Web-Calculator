@@ -1,0 +1,20 @@
+
+# JavaScript problems
+
+1. You can't divide/ NaN + any operator or num works!
+2. Pressing = button multiple times results unwanted answers:
+  a) on * and / -> number gets smaller and return NaN.
+  b) on - and + -> returns NaN.
+3. When you have a number and press =, it should return the same number (not NaN).
+4. When pressing multiple operators, it returns "can't divide by zero".
+5. When deleting operator and when you try to change it, it returns NaN.
+6. Code formatting is ugly
+
+# CSS problems
+
+1. Calculator is not centered
+2. Display should get bigger if the line is filled with numbers.
+3. Button on click animation, on hover animation.
+4. Better error message.
+5. Add background color to the site.
+6. Remove white borders on buttons.

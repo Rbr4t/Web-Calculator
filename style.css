@@ -1,14 +1,22 @@
 
 body {
     display: flex;
+    
+    justify-content: center;
 }
 
 .calculator {
     
     flex-direction: column;
-    justify-content: center;
+    
     width: 300px;
+    border: 10px solid black;
+    border-radius: 15px;
+    
 
+}
+.calculator div {
+    
 }
 
 /*Number buttons*/
@@ -17,6 +25,7 @@ body {
 .operators {
     display: flex;
     gap: 10px;
+    
 }
 
 .buttons-container {
@@ -29,11 +38,19 @@ body {
     padding: 15px;
     justify-content: center;
 }
-
+p {
+    font-family: 'roboto';
+    font-size: 50px;
+    
+}
+.screen p{
+    flex-wrap: wrap;
+}
 button {
     width: 50px;
     height: 50px;
-    
+    font-family: 'roboto';
+    font-size: large;
 }
 
 .numbers-section {
