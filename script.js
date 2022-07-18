@@ -101,5 +101,11 @@ operations.addEventListener('click', function(e){
     if (operation===""){
         changeOperator(e);
         isFloat = false;
-    };
+    } else if (operation!=="" && isFloat || !isFloat){
+        let screenContent = screen.textContent.split(operation);
+        const answer = operate(screenContent[0], operation, screenContent[1])
+        screen.textContent = answer;
+        changeOperator(e);
+        isFloat = false;
+    }
 });
