@@ -40,8 +40,7 @@ function operate(a, operation, b){
         case operation == "/":
             return divide(a, b);
             
-        default:
-            return "ERROR";
+        
     };
 };
 
@@ -60,6 +59,8 @@ function displayToScreen(e){
 // Get the input of numbers
 const input = document.querySelector('.numbers');
 input.addEventListener('click', function(e){
+    let screenContent = screen.textContent.split(operation);
+    //console.log(operation)
     if (e.target.id==="."){
         displayToScreen(e);
         isFloat = true;
@@ -67,11 +68,14 @@ input.addEventListener('click', function(e){
 
     if (e.target.id !== "="){
         displayToScreen(e);
-    } else if (e.target.id === "="){
+    } else if (e.target.id === "=" && operation!==""){
         
-        let screenContent = screen.textContent.split(operation);
-        console.log(screen.textContent)
-        const answer = operate(screenContent[0], operation, screenContent[1])
+        
+
+        let a = screenContent[0];
+        let b = screenContent[1];
+
+        const answer = operate(a, operation, b)
         screen.textContent = answer;
         operation = "";
         
@@ -91,8 +95,12 @@ clear.addEventListener('click', () => {
 // Delete button functionality
 const deleteContent = document.querySelector('#delete');
 deleteContent.addEventListener('click', ()=>{
-    let deletebit = screen.textContent.slice(0, screen.textContent.length -1);
-    screen.textContent = deletebit;
+    let deletebit = screen.textContent[screen.textContent.length -1]
+    if("+-*/".includes(deletebit)){
+        operation = ""
+    }
+    let newText = screen.textContent.slice(0, screen.textContent.length -1)
+    screen.textContent = newText;
 });
 
 
