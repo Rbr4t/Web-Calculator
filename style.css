@@ -99,7 +99,7 @@ p {
     background-color: #4ab545;
 }
 .calculator button:active {
-    transform: scale(0.85);
+    transform: scale(0.95);
     
     border-radius: 5px;
     

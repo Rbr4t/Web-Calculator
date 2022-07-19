@@ -1,13 +1,13 @@
 
 # JavaScript problems
 
-1. You can't divide/ NaN + any operator or num works! #wtf is this
+
 2̶.̶ P̶r̶e̶s̶s̶i̶n̶g̶ =̶ b̶u̶t̶t̶o̶n̶ m̶u̶l̶t̶i̶p̶l̶e̶ t̶i̶m̶e̶s̶ r̶e̶s̶u̶l̶t̶s̶ u̶n̶w̶a̶n̶t̶e̶d̶ a̶n̶s̶w̶e̶r̶s̶:̶
   a̶)̶ o̶n̶ *̶ a̶n̶d̶ /̶ -̶>̶ n̶u̶m̶b̶e̶r̶ g̶e̶t̶s̶ s̶m̶a̶l̶l̶e̶r̶ a̶n̶d̶ r̶e̶t̶u̶r̶n̶ N̶a̶N̶.̶
   b̶)̶ o̶n̶ -̶ a̶n̶d̶ +̶ -̶>̶ r̶e̶t̶u̶r̶n̶s̶ N̶a̶N̶.̶
 3̶.̶ W̶h̶e̶n̶ y̶o̶u̶ h̶a̶v̶e̶ a̶ n̶u̶m̶b̶e̶r̶ a̶n̶d̶ p̶r̶e̶s̶s̶ =̶,̶ i̶t̶ s̶h̶o̶u̶l̶d̶ r̶e̶t̶u̶r̶n̶ t̶h̶e̶ s̶a̶m̶e̶ n̶u̶m̶b̶e̶r̶ (̶n̶o̶t̶ N̶a̶N̶)̶.̶
-4. When pressing multiple operators, it returns "can't divide by zero".
-5. When deleting operator and when you try to change it, it returns NaN.
+4̶.̶ W̶h̶e̶n̶ p̶r̶e̶s̶s̶i̶n̶g̶ m̶u̶l̶t̶i̶p̶l̶e̶ o̶p̶e̶r̶a̶t̶o̶r̶s̶,̶ i̶t̶ r̶e̶t̶u̶r̶n̶s̶ "̶c̶a̶n̶'̶t̶ d̶i̶v̶i̶d̶e̶ b̶y̶ z̶e̶r̶o̶"̶.̶
+5̶.̶ W̶h̶e̶n̶ d̶e̶l̶e̶t̶i̶n̶g̶ o̶p̶e̶r̶a̶t̶o̶r̶ a̶n̶d̶ w̶h̶e̶n̶ y̶o̶u̶ t̶r̶y̶ t̶o̶ c̶h̶a̶n̶g̶e̶ i̶t̶,̶ i̶t̶ r̶e̶t̶u̶r̶n̶s̶ N̶a̶N̶.̶
 6. Add keyboard support.
 7. Code formatting is ugly
 
