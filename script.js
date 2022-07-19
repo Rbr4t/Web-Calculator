@@ -7,27 +7,27 @@ let isFloat = false;
 
 //basic operations 
 function add(a, b){
-    return parseFloat(a)+parseFloat(b);
+    return Math.round((parseFloat(a)+parseFloat(b))*1000)/1000;  // Why am I rounding so much? - floating point math
 };
 
 function subtract(a, b){
-    return parseFloat(a)-parseFloat(b);
+    return Math.round((parseFloat(a)-parseFloat(b))*1000)/1000;
 };
 
 function multiply(a, b){
-    return parseFloat(a)*parseFloat(b);
+    return Math.round((parseFloat(a)*parseFloat(b))*1000)/1000;
 };
 
 function divide(a, b){
-    return b!=0 ?Math.round(parseFloat(a)/parseFloat(b)*1000)/1000: "nice try";
+    return b!=0?Math.round(parseFloat(a)/parseFloat(b)*1000)/1000: a!==""&&b!=="" ?"nice try": "NaN";
 };
 
 
 
 // Function which operates and returns answer
 function operate(a, operation, b){
-    
-    switch (operation!=""){
+    console.log(!isNaN(a) && !isNaN(b))
+    switch (operation!="" && !isNaN(a) && !isNaN(b)){
         case operation == "+":
             return add(a, b);
             
@@ -60,6 +60,12 @@ function displayToScreen(e){
 const input = document.querySelector('.numbers');
 input.addEventListener('click', function(e){
     let screenContent = screen.textContent.split(operation);
+    let a = screenContent[0];
+    let b = screenContent[1];
+    
+    if (isNaN(a) || isNaN(b)){
+        
+    }
     //console.log(operation)
     if (e.target.id==="."){
         displayToScreen(e);
@@ -69,12 +75,6 @@ input.addEventListener('click', function(e){
     if (e.target.id !== "="){
         displayToScreen(e);
     } else if (e.target.id === "=" && operation!==""){
-        
-        
-
-        let a = screenContent[0];
-        let b = screenContent[1];
-
         const answer = operate(a, operation, b)
         screen.textContent = answer;
         operation = "";
@@ -109,7 +109,6 @@ deleteContent.addEventListener('click', ()=>{
 
 // Change the operator + display it on screen
 function changeOperator(e){
-    console.log(operation)
     operation = e.target.id;
     const textNode = document.createTextNode(e.target.id);
     screen.appendChild(textNode);
