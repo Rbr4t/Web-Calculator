@@ -12,9 +12,9 @@
 
 # CSS problems
 
-1. Calculator is not centered
+1̶.̶ C̶a̶l̶c̶u̶l̶a̶t̶o̶r̶ i̶s̶ n̶o̶t̶ c̶e̶n̶t̶e̶r̶e̶d̶
 2. Display should get bigger if the line is filled with numbers.
-3. Button on click animation, on hover animation.
+3̶.̶ B̶u̶t̶t̶o̶n̶ o̶n̶ c̶l̶i̶c̶k̶ a̶n̶i̶m̶a̶t̶i̶o̶n̶,̶ o̶n̶ h̶o̶v̶e̶r̶ a̶n̶i̶m̶a̶t̶i̶o̶n̶.̶
 4. Better error message.
 5. Add background color to the site.
-6. Remove white borders on buttons.
+6̶.̶ R̶e̶m̶o̶v̶e̶ w̶h̶i̶t̶e̶ b̶o̶r̶d̶e̶r̶s̶ o̶n̶ b̶u̶t̶t̶o̶n̶s̶.̶
