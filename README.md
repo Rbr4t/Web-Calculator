@@ -3,8 +3,8 @@ Simple calculator without any scientific functions or operators written using va
 
 This calculator supports:
 <ul>
-    <li>adding;</li>
-    <li>subtracting;</li>
+    <li>addition;</li>
+    <li>subtraction;</li>
     <li>multiplication;</li>
     <li>division;</li>
 </ul>
