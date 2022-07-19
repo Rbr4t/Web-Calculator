@@ -11,5 +11,5 @@ This calculator can do:
 In addition to this it has intuitive UI which is easy to use and to understand. 
 Made as final project of The Odin Project, on the Foundations path.
 
-Web link to the calculator app: ...
+Web link to the calculator app: https://rbr4t.github.io/Web-Calculator/
    
