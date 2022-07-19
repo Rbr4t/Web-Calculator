@@ -1,14 +1,15 @@
 
 # JavaScript problems
 
-1. You can't divide/ NaN + any operator or num works!
-2. Pressing = button multiple times results unwanted answers:
-  a) on * and / -> number gets smaller and return NaN.
-  b) on - and + -> returns NaN.
-3. When you have a number and press =, it should return the same number (not NaN).
+1. You can't divide/ NaN + any operator or num works! #wtf is this
+2̶.̶ P̶r̶e̶s̶s̶i̶n̶g̶ =̶ b̶u̶t̶t̶o̶n̶ m̶u̶l̶t̶i̶p̶l̶e̶ t̶i̶m̶e̶s̶ r̶e̶s̶u̶l̶t̶s̶ u̶n̶w̶a̶n̶t̶e̶d̶ a̶n̶s̶w̶e̶r̶s̶:̶
+  a̶)̶ o̶n̶ *̶ a̶n̶d̶ /̶ -̶>̶ n̶u̶m̶b̶e̶r̶ g̶e̶t̶s̶ s̶m̶a̶l̶l̶e̶r̶ a̶n̶d̶ r̶e̶t̶u̶r̶n̶ N̶a̶N̶.̶
+  b̶)̶ o̶n̶ -̶ a̶n̶d̶ +̶ -̶>̶ r̶e̶t̶u̶r̶n̶s̶ N̶a̶N̶.̶
+3̶.̶ W̶h̶e̶n̶ y̶o̶u̶ h̶a̶v̶e̶ a̶ n̶u̶m̶b̶e̶r̶ a̶n̶d̶ p̶r̶e̶s̶s̶ =̶,̶ i̶t̶ s̶h̶o̶u̶l̶d̶ r̶e̶t̶u̶r̶n̶ t̶h̶e̶ s̶a̶m̶e̶ n̶u̶m̶b̶e̶r̶ (̶n̶o̶t̶ N̶a̶N̶)̶.̶
 4. When pressing multiple operators, it returns "can't divide by zero".
 5. When deleting operator and when you try to change it, it returns NaN.
-6. Code formatting is ugly
+6. Add keyboard support.
+7. Code formatting is ugly
 
 # CSS problems
 
