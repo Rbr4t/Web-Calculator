@@ -13,8 +13,8 @@
 # CSS problems
 
 1̶.̶ C̶a̶l̶c̶u̶l̶a̶t̶o̶r̶ i̶s̶ n̶o̶t̶ c̶e̶n̶t̶e̶r̶e̶d̶
-2. Display should get bigger if the line is filled with numbers.
+2̶.̶ D̶i̶s̶p̶l̶a̶y̶ s̶h̶o̶u̶l̶d̶ g̶e̶t̶ b̶i̶g̶g̶e̶r̶ i̶f̶ t̶h̶e̶ l̶i̶n̶e̶ i̶s̶ f̶i̶l̶l̶e̶d̶ w̶i̶t̶h̶ n̶u̶m̶b̶e̶r̶s̶.̶
 3̶.̶ B̶u̶t̶t̶o̶n̶ o̶n̶ c̶l̶i̶c̶k̶ a̶n̶i̶m̶a̶t̶i̶o̶n̶,̶ o̶n̶ h̶o̶v̶e̶r̶ a̶n̶i̶m̶a̶t̶i̶o̶n̶.̶
-4. Better error message.
-5. Add background color to the site.
+4̶.̶ B̶e̶t̶t̶e̶r̶ e̶r̶r̶o̶r̶ m̶e̶s̶s̶a̶g̶e̶.̶
+5̶.̶ A̶d̶d̶ b̶a̶c̶k̶g̶r̶o̶u̶n̶d̶ c̶o̶l̶o̶r̶ t̶o̶ t̶h̶e̶ s̶i̶t̶e̶.̶
 6̶.̶ R̶e̶m̶o̶v̶e̶ w̶h̶i̶t̶e̶ b̶o̶r̶d̶e̶r̶s̶ o̶n̶ b̶u̶t̶t̶o̶n̶s̶.̶

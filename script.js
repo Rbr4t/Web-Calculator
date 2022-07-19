@@ -19,7 +19,7 @@ function multiply(a, b){
 };
 
 function divide(a, b){
-    return b!=0 ?Math.round(parseFloat(a)/parseFloat(b)*1000)/1000: "You can't divide with 0!";
+    return b!=0 ?Math.round(parseFloat(a)/parseFloat(b)*1000)/1000: "nice try";
 };
 
 

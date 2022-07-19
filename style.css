@@ -29,7 +29,7 @@ p {
 
 
 .screen {
-    height: 100px;
+    min-height: 70px;
     background-color: #97adad;
     display: flex;
     justify-content: center;
@@ -37,7 +37,10 @@ p {
     
 }
 .screen p{
-    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+    resize: vertical;
+    
+    
 }
 
 
@@ -47,8 +50,8 @@ p {
     align-items: center;
     background-color: #e3dfde;
     width: 250px;
-    height: 70px;
-    
+    min-height: 70px;
+    overflow-wrap: break-word;
     border-radius: 5px;
     border: 3px solid black
 }
