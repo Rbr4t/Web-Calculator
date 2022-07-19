@@ -1,9 +1,7 @@
-
-
 // Global variables
 const screen = document.querySelector('.onscreen');
 let operation = "";
-let isFloat = false;
+let ISFLOAT = false;
 
 //basic operations 
 function add(a, b){
@@ -26,7 +24,6 @@ function divide(a, b){
 
 // Function which operates and returns answer
 function operate(a, operation, b){
-    console.log(!isNaN(a) && !isNaN(b))
     switch (operation!="" && !isNaN(a) && !isNaN(b)){
         case operation == "+":
             return add(a, b);
@@ -39,8 +36,6 @@ function operate(a, operation, b){
             
         case operation == "/":
             return divide(a, b);
-            
-        
     };
 };
 
@@ -48,7 +43,7 @@ function operate(a, operation, b){
 
 // Display the input to the screen
 function displayToScreen(e){
-    if (!isFloat || (isFloat && e.target.id !==".")){
+    if (!ISFLOAT || (ISFLOAT && e.target.id !==".")){
         const textNode = document.createTextNode(e.target.id);
         screen.appendChild(textNode);
     };
@@ -63,13 +58,11 @@ input.addEventListener('click', function(e){
     let a = screenContent[0];
     let b = screenContent[1];
     
-    if (isNaN(a) || isNaN(b)){
-        
-    }
-    //console.log(operation)
+    if (isNaN(a) || isNaN(b)){}
+
     if (e.target.id==="."){
         displayToScreen(e);
-        isFloat = true;
+        ISFLOAT = true;
     };
 
     if (e.target.id !== "="){
@@ -88,22 +81,21 @@ input.addEventListener('click', function(e){
 const clear = document.querySelector('#clear');
 clear.addEventListener('click', () => {
     screen.textContent = ""
-    isFloat = false;
+    ISFLOAT = false;
 });
+
 
 
 // Delete button functionality
 const deleteContent = document.querySelector('#delete');
 deleteContent.addEventListener('click', ()=>{
-    let deletebit = screen.textContent[screen.textContent.length -1]
+    let deletebit = screen.textContent[screen.textContent.length -1];
     if("+-*/".includes(deletebit)){
-        operation = ""
-    }
-    let newText = screen.textContent.slice(0, screen.textContent.length -1)
+        operation = "";
+    };
+    let newText = screen.textContent.slice(0, screen.textContent.length -1);
     screen.textContent = newText;
 });
-
-
 
 
 
@@ -112,8 +104,7 @@ function changeOperator(e){
     operation = e.target.id;
     const textNode = document.createTextNode(e.target.id);
     screen.appendChild(textNode);
-
-}
+};
 
 
 
@@ -122,15 +113,12 @@ const operations = document.querySelector('.operators');
 operations.addEventListener('click', function(e){
     if (operation===""){
         changeOperator(e);
-        isFloat = false;
+        ISFLOAT = false;
     } else if (operation!==""){
         let screenContent = screen.textContent.split(operation);
         const answer = operate(screenContent[0], operation, screenContent[1])
         screen.textContent = answer;
         changeOperator(e);
-        isFloat = false;
+        ISFLOAT = false;
     }
 });
-
-
-

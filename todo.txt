@@ -9,7 +9,7 @@
 4̶.̶ W̶h̶e̶n̶ p̶r̶e̶s̶s̶i̶n̶g̶ m̶u̶l̶t̶i̶p̶l̶e̶ o̶p̶e̶r̶a̶t̶o̶r̶s̶,̶ i̶t̶ r̶e̶t̶u̶r̶n̶s̶ "̶c̶a̶n̶'̶t̶ d̶i̶v̶i̶d̶e̶ b̶y̶ z̶e̶r̶o̶"̶.̶
 5̶.̶ W̶h̶e̶n̶ d̶e̶l̶e̶t̶i̶n̶g̶ o̶p̶e̶r̶a̶t̶o̶r̶ a̶n̶d̶ w̶h̶e̶n̶ y̶o̶u̶ t̶r̶y̶ t̶o̶ c̶h̶a̶n̶g̶e̶ i̶t̶,̶ i̶t̶ r̶e̶t̶u̶r̶n̶s̶ N̶a̶N̶.̶
 6. Add keyboard support.
-7. Code formatting is ugly
+7̶.̶ C̶o̶d̶e̶ f̶o̶r̶m̶a̶t̶t̶i̶n̶g̶ i̶s̶ u̶g̶l̶y̶
 
 # CSS problems
 
