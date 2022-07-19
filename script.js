@@ -60,7 +60,7 @@ function displayToScreen(e){
 const input = document.querySelector('.numbers');
 input.addEventListener('click', function(e){
     let screenContent = screen.textContent.split(operation);
-    console.log(operation)
+    //console.log(operation)
     if (e.target.id==="."){
         displayToScreen(e);
         isFloat = true;
@@ -95,8 +95,12 @@ clear.addEventListener('click', () => {
 // Delete button functionality
 const deleteContent = document.querySelector('#delete');
 deleteContent.addEventListener('click', ()=>{
-    let deletebit = screen.textContent.slice(0, screen.textContent.length -1);
-    screen.textContent = deletebit;
+    let deletebit = screen.textContent[screen.textContent.length -1]
+    if("+-*/".includes(deletebit)){
+        operation = ""
+    }
+    let newText = screen.textContent.slice(0, screen.textContent.length -1)
+    screen.textContent = newText;
 });
 
 
