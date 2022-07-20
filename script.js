@@ -1,6 +1,6 @@
 // Global variables
 const screen = document.querySelector('.onscreen');
-let operation = "";
+let OPERATION = "";
 let ISFLOAT = false;
 
 //basic operations 
@@ -23,18 +23,18 @@ function divide(a, b){
 
 
 // Function which operates and returns answer
-function operate(a, operation, b){
-    switch (operation!="" && !isNaN(a) && !isNaN(b)){
-        case operation == "+":
+function operate(a, OPERATION, b){
+    switch (OPERATION){
+        case "+":
             return add(a, b);
             
-        case operation == "-":
+        case "-":
             return subtract(a, b);
             
-        case operation == "*":
+        case "*":
             return multiply(a, b);
             
-        case operation == "/":
+        case "/":
             return divide(a, b);
     };
 };
@@ -45,7 +45,10 @@ function operate(a, operation, b){
 function displayToScreen(e){
     if (!ISFLOAT || (ISFLOAT && e.target.id !==".")){
         const textNode = document.createTextNode(e.target.id);
-        screen.appendChild(textNode);
+
+        if (!screen.textContent.includes("NaN")){
+            screen.appendChild(textNode);
+        };
     };
 };
 
@@ -54,11 +57,10 @@ function displayToScreen(e){
 // Get the input of numbers
 const input = document.querySelector('.numbers');
 input.addEventListener('click', function(e){
-    let screenContent = screen.textContent.split(operation);
+    let screenContent = screen.textContent.split(OPERATION);
     let a = screenContent[0];
     let b = screenContent[1];
     
-    if (isNaN(a) || isNaN(b)){}
 
     if (e.target.id==="."){
         displayToScreen(e);
@@ -67,10 +69,10 @@ input.addEventListener('click', function(e){
 
     if (e.target.id !== "="){
         displayToScreen(e);
-    } else if (e.target.id === "=" && operation!==""){
-        const answer = operate(a, operation, b)
+    } else if (e.target.id === "=" && OPERATION!==""){
+        const answer = operate(a, OPERATION, b)
         screen.textContent = answer;
-        operation = "";
+        OPERATION = "";
         
     }; 
 });
@@ -82,6 +84,7 @@ const clear = document.querySelector('#clear');
 clear.addEventListener('click', () => {
     screen.textContent = ""
     ISFLOAT = false;
+    OPERATION = ""
 });
 
 
@@ -91,7 +94,7 @@ const deleteContent = document.querySelector('#delete');
 deleteContent.addEventListener('click', ()=>{
     let deletebit = screen.textContent[screen.textContent.length -1];
     if("+-*/".includes(deletebit)){
-        operation = "";
+        OPERATION = "";
     };
     let newText = screen.textContent.slice(0, screen.textContent.length -1);
     screen.textContent = newText;
@@ -101,7 +104,7 @@ deleteContent.addEventListener('click', ()=>{
 
 // Change the operator + display it on screen
 function changeOperator(e){
-    operation = e.target.id;
+    OPERATION = e.target.id;
     const textNode = document.createTextNode(e.target.id);
     screen.appendChild(textNode);
 };
@@ -109,14 +112,14 @@ function changeOperator(e){
 
 
 // Get the operation
-const operations = document.querySelector('.operators');
-operations.addEventListener('click', function(e){
-    if (operation===""){
+const OPERATIONs = document.querySelector('.operators');
+OPERATIONs.addEventListener('click', function(e){
+    if (OPERATION===""){
         changeOperator(e);
         ISFLOAT = false;
-    } else if (operation!==""){
-        let screenContent = screen.textContent.split(operation);
-        const answer = operate(screenContent[0], operation, screenContent[1])
+    } else if (OPERATION!==""){
+        let screenContent = screen.textContent.split(OPERATION);
+        const answer = operate(screenContent[0], OPERATION, screenContent[1])
         screen.textContent = answer;
         changeOperator(e);
         ISFLOAT = false;
