@@ -1,5 +1,5 @@
 // Global variables
-const screen = document.querySelector('.onscreen');
+const SCREEN = document.querySelector('.onscreen');
 let OPERATION = "";
 let ISFLOAT = false;
 
@@ -46,8 +46,8 @@ function displayToScreen(e){
     if (!ISFLOAT || (ISFLOAT && e.target.id !==".")){
         const textNode = document.createTextNode(e.target.id);
 
-        if (!screen.textContent.includes("NaN")){
-            screen.appendChild(textNode);
+        if (!SCREEN.textContent.includes("NaN")){
+            SCREEN.appendChild(textNode);
         };
     };
 };
@@ -57,7 +57,7 @@ function displayToScreen(e){
 // Get the input of numbers
 const input = document.querySelector('.numbers');
 input.addEventListener('click', function(e){
-    let screenContent = screen.textContent.split(OPERATION);
+    let screenContent = SCREEN.textContent.split(OPERATION);
     let a = screenContent[0];
     let b = screenContent[1];
     
@@ -71,7 +71,7 @@ input.addEventListener('click', function(e){
         displayToScreen(e);
     } else if (e.target.id === "=" && OPERATION!==""){
         const answer = operate(a, OPERATION, b)
-        screen.textContent = answer;
+        SCREEN.textContent = answer;
         OPERATION = "";
         
     }; 
@@ -82,7 +82,7 @@ input.addEventListener('click', function(e){
 // Clear screen functionality
 const clear = document.querySelector('#clear');
 clear.addEventListener('click', () => {
-    screen.textContent = ""
+    SCREEN.textContent = ""
     ISFLOAT = false;
     OPERATION = ""
 });
@@ -92,16 +92,16 @@ clear.addEventListener('click', () => {
 // Delete button functionality
 const deleteContent = document.querySelector('#delete');
 deleteContent.addEventListener('click', ()=>{
-    let deletebit = screen.textContent[screen.textContent.length -1];
+    let deletebit = SCREEN.textContent[SCREEN.textContent.length -1];
     if("+-*/".includes(deletebit)){
         OPERATION = "";
     };
-    if (screen.textContent === "NaN"){
-        let newText = screen.textContent.slice(0, screen.textContent.length -3);
-        screen.textContent = newText;
+    if (SCREEN.textContent === "NaN"){
+        let newText = SCREEN.textContent.slice(0, SCREEN.textContent.length -3);
+        SCREEN.textContent = newText;
     } else {
-        let newText = screen.textContent.slice(0, screen.textContent.length -1);
-        screen.textContent = newText;
+        let newText = SCREEN.textContent.slice(0, SCREEN.textContent.length -1);
+        SCREEN.textContent = newText;
     };
 });
 
@@ -111,7 +111,7 @@ deleteContent.addEventListener('click', ()=>{
 function changeOperator(e){
     OPERATION = e.target.id;
     const textNode = document.createTextNode(e.target.id);
-    screen.appendChild(textNode);
+    SCREEN.appendChild(textNode);
 };
 
 
@@ -123,9 +123,9 @@ OPERATIONs.addEventListener('click', function(e){
         changeOperator(e);
         ISFLOAT = false;
     } else if (OPERATION!==""){
-        let screenContent = screen.textContent.split(OPERATION);
+        let screenContent = SCREEN.textContent.split(OPERATION);
         const answer = operate(screenContent[0], OPERATION, screenContent[1])
-        screen.textContent = answer;
+        SCREEN.textContent = answer;
         changeOperator(e);
         ISFLOAT = false;
     }
