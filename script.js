@@ -96,8 +96,13 @@ deleteContent.addEventListener('click', ()=>{
     if("+-*/".includes(deletebit)){
         OPERATION = "";
     };
-    let newText = screen.textContent.slice(0, screen.textContent.length -1);
-    screen.textContent = newText;
+    if (screen.textContent === "NaN"){
+        let newText = screen.textContent.slice(0, screen.textContent.length -3);
+        screen.textContent = newText;
+    } else {
+        let newText = screen.textContent.slice(0, screen.textContent.length -1);
+        screen.textContent = newText;
+    };
 });
 
 
